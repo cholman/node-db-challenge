@@ -60,7 +60,7 @@ Take the steps necessary to complete the project from scratch. Start by initiali
 
 Complete the following tasks:
 
-- [ ] Design the data model and use _knex migrations_ to create the database and tables needed to satisfy the following business rules:
+- [x] Design the data model and use _knex migrations_ to create the database and tables needed to satisfy the following business rules:
   - [x] a `project` can have multiple `tasks`.
   - [x] a `task` belongs to only one `project`.
   - [x] a `project` can use multiple `resources`. Example of `resources` are: computer, conference room, microphone, delivery van.
@@ -143,7 +143,7 @@ Add an endpoint for retrieving a `project` by its `id` that returns an object wi
 }
 ```
 
-Add the remaining CRUD operations for projects and tasks.
+[x] Add the remaining CRUD operations for projects and tasks.
 
 Use `knex` to add _data seeding_ scripts for projects and tasks.
 

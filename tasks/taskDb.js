@@ -9,7 +9,17 @@ module.exports = {
 };
 
 function get() {
-  return db('tasks');
+  return db('tasks')
+  .join('projects', 'projects.id', '=', 'tasks.project_id')
+  .select(
+      'tasks.id',
+      'tasks.description',
+      'tasks.notes',
+      'tasks.completed',
+      'tasks.project_id',
+      'projects.name as project_name',
+      'projects.description as project_description'
+  )
 }
 
 function getById(id) {

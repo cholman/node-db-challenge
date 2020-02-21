@@ -33,14 +33,6 @@ exports.up = function(knex) {
         .createTable('resources', function(resources){
             resources.increments();
             resources
-                .integer('task_id')
-                .unsigned()
-                .notNullable()
-                .references('id')
-                .inTable('tasks')
-                .onDelete('CASCADE')
-                .onUpdate('CASCADE');
-            resources
                 .string('name').notNullable();
             resources
                 .string('description');
