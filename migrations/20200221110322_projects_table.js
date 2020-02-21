@@ -9,7 +9,7 @@ exports.up = function(knex) {
             projects
                 .string('description');
             projects
-                .boolean('completed');
+                .boolean('completed').defaultTo('false');
                 
         })
         .createTable('tasks', function(tasks){
@@ -28,7 +28,7 @@ exports.up = function(knex) {
             tasks
                 .string('notes');
             tasks
-                .boolean('completed');
+                .boolean('completed').defaultTo('false');
         })
         .createTable('resources', function(resources){
             resources.increments();
